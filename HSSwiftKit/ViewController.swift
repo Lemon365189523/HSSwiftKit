@@ -17,3 +17,22 @@ class ViewController: UIViewController {
 
 }
 
+
+
+
+
+class TestViewModel: ViewModelType {
+    struct Input  {
+        
+    }
+    
+    struct Output {
+        
+    }
+    
+    func transform(input: Input) -> Output {
+        
+        return Output()
+    }
+    
+}

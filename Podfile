@@ -20,5 +20,7 @@ target 'HSSwiftKit' do
   pod "HSTools/VisitorTool", path: '../zykeji/HSPrivatePods/HSTools', :modular_headers => true
   pod "HSModuleMediator/Login" , path: '../zykeji/HSPrivatePods/HSModuleMediator', :modular_headers => true
   pod "HSMediator" , path: '../zykeji/HSPrivatePods/HSMediator', :modular_headers => true
+  pod "HSUIComponents/MBManager" , path: '../zykeji/HSPrivatePods/HSUIComponents', :modular_headers => true
+  pod "HSUIComponents/HSRefresh" , path: '../zykeji/HSPrivatePods/HSUIComponents', :modular_headers => true
 end
 

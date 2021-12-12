@@ -3,3 +3,4 @@
 //
 
 #import "HSNetwork-umbrella.h"
+#import "HSCategorys-umbrella.h"

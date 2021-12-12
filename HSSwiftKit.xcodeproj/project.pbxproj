@@ -23,6 +23,11 @@
 		31B532AE275B7DFC00416D9E /* DefaultValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B532AD275B7DFC00416D9E /* DefaultValue.swift */; };
 		31B532B2275B96A500416D9E /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B532B1275B96A500416D9E /* UserDefaultWrapper.swift */; };
 		31B532B5275B984900416D9E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B532B4275B984900416D9E /* Network.swift */; };
+		31E7C5D9276603BB002EC67A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7C5D8276603BB002EC67A /* ViewModelType.swift */; };
+		31E7C6EE276606B0002EC67A /* HSHUDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7C6ED276606B0002EC67A /* HSHUDType.swift */; };
+		31E7C6F427661560002EC67A /* UI+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7C6F327661560002EC67A /* UI+Rx.swift */; };
+		31E7C6F8276615E7002EC67A /* UIKit+HS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7C6F7276615E7002EC67A /* UIKit+HS.swift */; };
+		31E7C6FC27663A47002EC67A /* HSEmptyViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7C6FB27663A47002EC67A /* HSEmptyViewType.swift */; };
 		D340B893FB3BD7D8A80F80D8 /* Pods_HSSwiftKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30938DEE5C2702DBD009057 /* Pods_HSSwiftKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +52,11 @@
 		31B532B1275B96A500416D9E /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		31B532B4275B984900416D9E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		31C8F77F275CBE5A00885FF4 /* HSSwiftKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HSSwiftKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		31E7C5D8276603BB002EC67A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		31E7C6ED276606B0002EC67A /* HSHUDType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSHUDType.swift; sourceTree = "<group>"; };
+		31E7C6F327661560002EC67A /* UI+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI+Rx.swift"; sourceTree = "<group>"; };
+		31E7C6F7276615E7002EC67A /* UIKit+HS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+HS.swift"; sourceTree = "<group>"; };
+		31E7C6FB27663A47002EC67A /* HSEmptyViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSEmptyViewType.swift; sourceTree = "<group>"; };
 		F30938DEE5C2702DBD009057 /* Pods_HSSwiftKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HSSwiftKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79A0C8DECC96184800ADF1B /* Pods-HSSwiftKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSSwiftKit.debug.xcconfig"; path = "Target Support Files/Pods-HSSwiftKit/Pods-HSSwiftKit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +120,8 @@
 		31B5327E275B647900416D9E /* HSSwift */ = {
 			isa = PBXGroup;
 			children = (
+				31E7C5D72766039D002EC67A /* HSProtocol */,
+				31E7C580276601C4002EC67A /* HSUIKit */,
 				31B532B0275B955200416D9E /* UserDefaultWrapper */,
 				31B532AC275B7CB100416D9E /* DefaultValue */,
 				31B5329C275B768400416D9E /* HSCodable */,
@@ -122,6 +134,7 @@
 		31B53280275B649600416D9E /* RxSwiftExtension */ = {
 			isa = PBXGroup;
 			children = (
+				31E7C6F22766154A002EC67A /* UI+Rx */,
 				31B532A7275B7C4900416D9E /* NSObject+Rx */,
 				31B53285275B743100416D9E /* RxActivityIndicator */,
 				31B53287275B743100416D9E /* RxErrorTracker */,
@@ -208,6 +221,48 @@
 				31B532B1275B96A500416D9E /* UserDefaultWrapper.swift */,
 			);
 			path = UserDefaultWrapper;
+			sourceTree = "<group>";
+		};
+		31E7C580276601C4002EC67A /* HSUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				31E7C6F627661599002EC67A /* UIKit+HS */,
+				31E7C5BC27660351002EC67A /* HSUIKitType */,
+			);
+			path = HSUIKit;
+			sourceTree = "<group>";
+		};
+		31E7C5BC27660351002EC67A /* HSUIKitType */ = {
+			isa = PBXGroup;
+			children = (
+				31E7C6ED276606B0002EC67A /* HSHUDType.swift */,
+				31E7C6FB27663A47002EC67A /* HSEmptyViewType.swift */,
+			);
+			path = HSUIKitType;
+			sourceTree = "<group>";
+		};
+		31E7C5D72766039D002EC67A /* HSProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				31E7C5D8276603BB002EC67A /* ViewModelType.swift */,
+			);
+			path = HSProtocol;
+			sourceTree = "<group>";
+		};
+		31E7C6F22766154A002EC67A /* UI+Rx */ = {
+			isa = PBXGroup;
+			children = (
+				31E7C6F327661560002EC67A /* UI+Rx.swift */,
+			);
+			path = "UI+Rx";
+			sourceTree = "<group>";
+		};
+		31E7C6F627661599002EC67A /* UIKit+HS */ = {
+			isa = PBXGroup;
+			children = (
+				31E7C6F7276615E7002EC67A /* UIKit+HS.swift */,
+			);
+			path = "UIKit+HS";
 			sourceTree = "<group>";
 		};
 		68DD83A191BA811BE5852169 /* Frameworks */ = {
@@ -344,12 +399,17 @@
 			files = (
 				31B532B5275B984900416D9E /* Network.swift in Sources */,
 				31B532B2275B96A500416D9E /* UserDefaultWrapper.swift in Sources */,
+				31E7C6EE276606B0002EC67A /* HSHUDType.swift in Sources */,
 				31B53289275B743100416D9E /* Observable+Operators.swift in Sources */,
 				31B5328B275B743100416D9E /* ErrorTracker.swift in Sources */,
 				31B5328A275B743100416D9E /* ActivityIndicator.swift in Sources */,
 				31B53269275B62AC00416D9E /* ViewController.swift in Sources */,
+				31E7C5D9276603BB002EC67A /* ViewModelType.swift in Sources */,
 				31B5329E275B768400416D9E /* HSCodable.swift in Sources */,
+				31E7C6F427661560002EC67A /* UI+Rx.swift in Sources */,
 				31B53265275B62AC00416D9E /* AppDelegate.swift in Sources */,
+				31E7C6F8276615E7002EC67A /* UIKit+HS.swift in Sources */,
+				31E7C6FC27663A47002EC67A /* HSEmptyViewType.swift in Sources */,
 				31B53267275B62AC00416D9E /* SceneDelegate.swift in Sources */,
 				31B53293275B754100416D9E /* HS.swift in Sources */,
 				31B5328E275B748700416D9E /* Configs.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import HSCommon
 
 struct Screen {
     static let width = UIScreen.main.bounds.width
@@ -23,10 +23,11 @@ struct Configs {
     }
     
     struct Dimensions {
-        static let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        static let statusBarHeight = HS_STATUS_BAR_HEIGHT()
         static let inset: CGFloat = 10
         static let tabBarHeight: CGFloat = Device.isIphoneX ? 49 + 34 : 49
-        static let navBarWithStatusBarHeight: CGFloat = Device.isIphoneX ? 88 : 64
+        static let navBarWithStatusBarHeight: CGFloat = statusBarHeight + navgationBarHeight
+        static let navgationBarHeight: CGFloat = 44
         static let scale = Screen.width / Screen.height
         static let bottomHight : CGFloat = Device.isIphoneX ? 34 : 0
     }
