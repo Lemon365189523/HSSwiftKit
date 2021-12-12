@@ -1,0 +1,84 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - HSCommon (0.0.1)
+  - HSKit/HSCache (0.0.1):
+    - YYKit (~> 1.0.9)
+  - HSKit/HSLock (0.0.1)
+  - HSNetwork (0.0.1):
+    - AFNetworking (~> 4.0.1)
+    - HSCommon
+    - HSKit/HSCache
+    - HSKit/HSLock
+    - MJExtension (~> 3.3.0)
+    - ReactiveObjC (~> 3.1.1)
+    - YYKit (~> 1.0.9)
+  - MJExtension (3.3.0)
+  - ReactiveObjC (3.1.1)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
+  - SnapKit (5.0.1)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - HSCommon (from `../zykeji/HSPrivatePods/HSCommon`)
+  - HSKit/HSLock (from `../zykeji/HSPrivatePods/HSKit`)
+  - HSNetwork (from `../zykeji/HSPrivatePods/HSNetwork`)
+  - RxCocoa
+  - RxSwift
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - MJExtension
+    - ReactiveObjC
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - YYKit
+
+EXTERNAL SOURCES:
+  HSCommon:
+    :path: "../zykeji/HSPrivatePods/HSCommon"
+  HSKit:
+    :path: "../zykeji/HSPrivatePods/HSKit"
+  HSNetwork:
+    :path: "../zykeji/HSPrivatePods/HSNetwork"
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  HSCommon: df3c7052fea2b877d483431882aed8e43a7694c7
+  HSKit: ce685ff3964ac4c3c43d0e36e6c427986f74529f
+  HSNetwork: 4b47dc681348825869ad18fb656f4617b702cb2a
+  MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 1100a62e2343afbbaf8b08ab1317cd463fa72279
+
+COCOAPODS: 1.11.2
