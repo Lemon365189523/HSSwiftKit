@@ -12,7 +12,6 @@ public enum HSRefreshType {
     case gray
 }
 
-
 extension HS where Base: UIScrollView {
     public func onRefresh(_ type: HSRefreshType = .gray, _ action: @escaping ()->()) {
         switch type {

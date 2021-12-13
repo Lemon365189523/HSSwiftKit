@@ -16,7 +16,7 @@ public enum HSEmptyViewType {
 }
 
 extension HS where Base: UIView {
-    
+    @discardableResult
     public func emptyView(type: HSEmptyViewType, frame: CGRect?, action: (() -> ())?) -> UIView? {
         switch type {
         case .networkError:

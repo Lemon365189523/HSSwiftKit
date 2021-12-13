@@ -7,6 +7,7 @@
 
 import Foundation
 import RxCocoa
+import RxSwift
 
 protocol ViewModelType {
     associatedtype Input
@@ -28,5 +29,7 @@ public protocol RefreshType {
 }
 
 public protocol EmptyDataType {
-    
+    var empty: PublishSubject<HSEmptyViewType>{get set}
 }
+
+

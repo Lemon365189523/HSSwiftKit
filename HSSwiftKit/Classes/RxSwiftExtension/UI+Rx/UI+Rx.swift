@@ -8,8 +8,6 @@
 import Foundation
 import RxCocoa
 import RxSwift
-//import HSCategorys
-
 //MARK: --UIScrollView
 extension Reactive where Base : UIScrollView {
     
@@ -66,3 +64,31 @@ extension Reactive where Base : UIImageView {
         }
     }
 }
+
+
+extension Reactive where Base: UIView {
+    
+    public struct HSRxEmptyItem {
+        let type: HSEmptyViewType
+        let frame: CGRect?
+        let observer: AnyObserver<Void>?
+    }
+    
+    public var empty: Binder<HSRxEmptyItem>{
+        return Binder(self.base) { view, item in
+            view.hs.emptyView(type: item.type, frame: item.frame) {
+                guard let observer = item.observer else {
+                    return
+                }
+                observer.onNext(())
+            }
+        }
+    }
+    
+    public var hud: Binder<HSHUDType> {
+        return Binder(self.base) { view, type in
+            view.hs.hud(type)
+        }
+    }
+}
+
