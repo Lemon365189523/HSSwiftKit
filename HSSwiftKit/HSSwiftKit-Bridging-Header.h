@@ -5,3 +5,5 @@
 #import "HSNetwork-umbrella.h"
 #import "HSCategorys-umbrella.h"
 #import "HSUIComponents-umbrella.h"
+#import "HSBaseRequest-umbrella.h"
+#import "HSKit-umbrella.h"

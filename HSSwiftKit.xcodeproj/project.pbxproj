@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		317BCD162766EDF500301A00 /* HSRefreshType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BCD152766EDF500301A00 /* HSRefreshType.swift */; };
+		317BCD19276721D800301A00 /* Network+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BCD18276721D800301A00 /* Network+Rx.swift */; };
+		317BCD1C27673F7200301A00 /* UITableView+DelegateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BCD1B27673F7200301A00 /* UITableView+DelegateModel.swift */; };
+		317BCD1E27673F8200301A00 /* UICollectionView+DelegateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BCD1D27673F8200301A00 /* UICollectionView+DelegateModel.swift */; };
 		31B53265275B62AC00416D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B53264275B62AC00416D9E /* AppDelegate.swift */; };
 		31B53267275B62AC00416D9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B53266275B62AC00416D9E /* SceneDelegate.swift */; };
 		31B53269275B62AC00416D9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B53268275B62AC00416D9E /* ViewController.swift */; };
@@ -35,6 +38,9 @@
 /* Begin PBXFileReference section */
 		2AB075699C914E16DA646B0E /* Pods-HSSwiftKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSSwiftKit.release.xcconfig"; path = "Target Support Files/Pods-HSSwiftKit/Pods-HSSwiftKit.release.xcconfig"; sourceTree = "<group>"; };
 		317BCD152766EDF500301A00 /* HSRefreshType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSRefreshType.swift; sourceTree = "<group>"; };
+		317BCD18276721D800301A00 /* Network+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Rx.swift"; sourceTree = "<group>"; };
+		317BCD1B27673F7200301A00 /* UITableView+DelegateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DelegateModel.swift"; sourceTree = "<group>"; };
+		317BCD1D27673F8200301A00 /* UICollectionView+DelegateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DelegateModel.swift"; sourceTree = "<group>"; };
 		31B53261275B62AC00416D9E /* HSSwiftKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSSwiftKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B53264275B62AC00416D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31B53266275B62AC00416D9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		317BCD17276721BC00301A00 /* Network+Rx */ = {
+			isa = PBXGroup;
+			children = (
+				317BCD18276721D800301A00 /* Network+Rx.swift */,
+			);
+			path = "Network+Rx";
+			sourceTree = "<group>";
+		};
+		317BCD1A27673EF700301A00 /* DelegateModel */ = {
+			isa = PBXGroup;
+			children = (
+				317BCD1B27673F7200301A00 /* UITableView+DelegateModel.swift */,
+				317BCD1D27673F8200301A00 /* UICollectionView+DelegateModel.swift */,
+			);
+			path = DelegateModel;
+			sourceTree = "<group>";
+		};
 		31B53258275B62AC00416D9E = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +145,7 @@
 		31B5327E275B647900416D9E /* HSSwift */ = {
 			isa = PBXGroup;
 			children = (
+				317BCD1A27673EF700301A00 /* DelegateModel */,
 				31E7C5D72766039D002EC67A /* HSProtocol */,
 				31E7C580276601C4002EC67A /* HSUIKit */,
 				31B532B0275B955200416D9E /* UserDefaultWrapper */,
@@ -136,6 +160,7 @@
 		31B53280275B649600416D9E /* RxSwiftExtension */ = {
 			isa = PBXGroup;
 			children = (
+				317BCD17276721BC00301A00 /* Network+Rx */,
 				31E7C6F22766154A002EC67A /* UI+Rx */,
 				31B532A7275B7C4900416D9E /* NSObject+Rx */,
 				31B53285275B743100416D9E /* RxActivityIndicator */,
@@ -417,8 +442,11 @@
 				31B53267275B62AC00416D9E /* SceneDelegate.swift in Sources */,
 				31B53293275B754100416D9E /* HS.swift in Sources */,
 				31B5328E275B748700416D9E /* Configs.swift in Sources */,
+				317BCD1C27673F7200301A00 /* UITableView+DelegateModel.swift in Sources */,
 				31B532AE275B7DFC00416D9E /* DefaultValue.swift in Sources */,
+				317BCD19276721D800301A00 /* Network+Rx.swift in Sources */,
 				31B532A9275B7C8200416D9E /* NSObject+Rx.swift in Sources */,
+				317BCD1E27673F8200301A00 /* UICollectionView+DelegateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

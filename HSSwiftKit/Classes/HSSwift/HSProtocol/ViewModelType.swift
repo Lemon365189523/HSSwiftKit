@@ -23,13 +23,19 @@ public protocol ListDataType {
     var pageIndex : Int {get set}
 }
 
+public protocol RefreshActionType {
+    var onRefresh: Driver<Void> {get set}
+    var onLoadMore: Driver<Void> {get set}
+}
 
 public protocol RefreshType {
-    
+    var isRefreshing: PublishSubject<Bool> {get set}
+    var isNotMoreData: PublishSubject<Bool> {get set}
 }
 
 public protocol EmptyDataType {
     var empty: PublishSubject<HSEmptyViewType>{get set}
 }
+
 
 

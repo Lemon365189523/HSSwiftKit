@@ -23,5 +23,8 @@ target 'HSSwiftKit' do
   pod "HSMediator" , path: '../ZhiYing/HSPrivatePods/HSMediator', :modular_headers => true
   pod "HSUIComponents/MBManager" , path: '../ZhiYing/HSPrivatePods/HSUIComponents', :modular_headers => true
   pod "HSUIComponents/HSRefresh" , path: '../ZhiYing/HSPrivatePods/HSUIComponents', :modular_headers => true
+  pod "HSBaseRequest", path: '../ZhiYing/HSPrivatePods/HSBaseRequest', :modular_headers => true
+  pod "HSOpenInstallHandler", path: '../ZhiYing/HSPrivatePods/HSOpenInstallHandler', :modular_headers => true
+  pod "HSKit/HSSimpleDelegateModel", path: '../ZhiYing/HSPrivatePods/HSKit', :modular_headers => true
 end
 

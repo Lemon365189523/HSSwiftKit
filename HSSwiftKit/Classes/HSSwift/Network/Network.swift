@@ -21,9 +21,9 @@ public protocol ApiType {
 
 extension HSNetManager: HSNameSpace {}
 
-public extension HS where Base == HSNetManager {
+extension HS where Base: HSNetManager {
     
-    static func request(_ api: ApiType,
+    public static func request(_ api: ApiType,
                         progress: ((Progress) -> ())?,
                         success:@escaping (_ resp: HSResponse) -> (),
                         fail:@escaping (_ error: Error) -> ()) -> URLSessionDataTask {
@@ -45,7 +45,7 @@ public extension HS where Base == HSNetManager {
         }
         return task
     }
-    
+
 }
 
  

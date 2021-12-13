@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DefaultValue {
-    associatedtype Value: Decodable
+    associatedtype Value: Codable
     static var defaultValue: Value { get }
 }
 
@@ -18,7 +18,7 @@ struct Default<T: DefaultValue> {
     var wrappedValue: T.Value
 }
 
-extension Default: Decodable {
+extension Default: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         wrappedValue = (try? container.decode(T.Value.self)) ?? T.defaultValue
@@ -60,9 +60,9 @@ extension Double: DefaultValue{
 extension String: DefaultValue{
     static let defaultValue = ""
     
-//    enum Empty: DefaultValue {
-//        static let defaultValue = ""
-//    }
+    enum Empty: DefaultValue {
+        static let defaultValue = ""
+    }
 }
 
 extension Array: DefaultValue where Element: Codable  {
@@ -74,6 +74,7 @@ extension Default {
     typealias True = Default<Bool.True>
     typealias TenInt = Default<Int.Ten>
     typealias TenDouble = Default<Int.Ten>
+    typealias EmptyString = Default<String.Empty>
 }
 
 /// 使用方式

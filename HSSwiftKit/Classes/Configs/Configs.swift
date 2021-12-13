@@ -37,5 +37,11 @@ struct Configs {
         static let isLessThanIphon6 = Screen.width <= 375
     }
     
-    
+}
+
+struct Host {
+    static func url(_ path: String) -> String {
+        let host: NSString = HSHost as NSString
+        return host.appendingPathComponent(path)
+    }
 }
