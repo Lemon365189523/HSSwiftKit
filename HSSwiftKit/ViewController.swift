@@ -10,13 +10,16 @@ import SnapKit
 import HSCommon
 import RxSwift
 import RxCocoa
+import HSBase
 
 class ViewController: UIViewController {
     
-    lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let c = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
-        return c
+    lazy var collectionView: UITableView = {
+//        let layout = UICollectionViewFlowLayout()
+//        let c = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
+        let tb = UITableView.init(frame: CGRect.zero, style: UITableView.Style.plain)
+        tb.hs.reloadData([]);
+        return tb
     }()
     
     lazy var viewModel = TestViewModel()
@@ -38,7 +41,12 @@ class ViewController: UIViewController {
     func bindViewModel(){
         let output = viewModel.transform(input: TestViewModel.Input(onRefresh: collectionView.rx.onRefresh, onLoadMore: collectionView.rx.onLoadMore))
         
-        output.isRefreshing.bind(to: collectionView.rx.isRefreshing).disposed(by: rx.disposeBag)
+        output.isRefreshing.drive(collectionView.rx.isRefreshing).disposed(by: rx.disposeBag)
+        
+        output.list.drive(onNext: {[weak self] list in
+            guard let self = self else { return }
+            self.collectionView.hs.reloadData(list)
+        }).disposed(by: rx.disposeBag)
         
     }
     
@@ -64,10 +72,11 @@ class TestViewModel: NSObject, ViewModelType, ListDataType {
     }
     
     struct Output: RefreshType {
-        var isRefreshing: PublishSubject<Bool>
+        var isRefreshing: Driver<Bool>
         
-        var isNotMoreData: PublishSubject<Bool>
+        var isNotMoreData: Driver<Bool>
         
+        var list: Driver<[HSTableAndCollectCommonGroupModel]>
     }
     
     func transform(input: Input) -> Output {
@@ -77,18 +86,28 @@ class TestViewModel: NSObject, ViewModelType, ListDataType {
         
         input.onRefresh.asObservable().flatMap { _ in
             HSNetManager.rx.request(TestApi.categorys, modelType: [CategoryItem].self)
-        }.subscribe(onNext: {[weak self] list in
+                .catch({ error in
+                    return Observable.empty()
+                })
+        }.subscribe(onNext: {[weak self] datas in
             isRefreshing.onNext(false)
-            guard let self = self, let itemList = list else { return }
+            guard let self = self, let itemList = datas else { return }
             print(itemList)
             let grouModel = HSTableAndCollectCommonGroupModel()
+            grouModel.itemsArray.addObjects(from: itemList.map({ item in
+                let cellModel = CategoryCellModel()
+                
+                return cellModel
+            }))
             self.list.accept([grouModel])
         }, onError: {error in
             print(error)
             isRefreshing.onNext(false)
         }).disposed(by: self.rx.disposeBag)
         
-        return Output(isRefreshing: isRefreshing, isNotMoreData: isNotMoreData)
+        return Output(isRefreshing: isRefreshing.asDriverOnErrorJustComplete(),
+                      isNotMoreData: isNotMoreData.asDriverOnErrorJustComplete(),
+                      list: list.asDriver())
     }
     
 }
@@ -99,6 +118,17 @@ struct CategoryItem: Codable {
     @Default.EmptyString var icon: String
     @Default<[CategoryItem]> var CategoryItem: [CategoryItem]
 }
+
+//@objcMembers
+class CategoryCellModel: HSTableAndCollectBaseItemModel {
+    override var itemCellClassName: String! {
+        get {
+            return "UITableViewCell"
+        }
+        set {}
+    }
+}
+
 
 enum TestApi {
     case categorys

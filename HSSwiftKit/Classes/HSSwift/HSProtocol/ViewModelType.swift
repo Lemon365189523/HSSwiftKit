@@ -29,8 +29,8 @@ public protocol RefreshActionType {
 }
 
 public protocol RefreshType {
-    var isRefreshing: PublishSubject<Bool> {get set}
-    var isNotMoreData: PublishSubject<Bool> {get set}
+    var isRefreshing: Driver<Bool> {get set}
+    var isNotMoreData: Driver<Bool> {get set}
 }
 
 public protocol EmptyDataType {

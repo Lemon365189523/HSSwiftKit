@@ -47,6 +47,10 @@ extension HS where Base: UITableView {
     }
     
     public func reloadData(_ datas: [HSTableAndCollectCommonGroupModel]){
+        if base.hs.dataArray.count == 0 && datas.count == 0 {
+            _ = base.hs.delegateModel
+            return
+        }
         base.hs.dataArray.removeAllObjects()
         base.hs.dataArray.addObjects(from: datas)
         base.reloadData()
