@@ -16,9 +16,9 @@ extension Reactive where Base : UIScrollView {
     public var onRefresh : Driver<Void> {
         return Observable<Void>.create {[weak base] (observer) -> Disposable in
             if let base = base {
-//                base.jy.onRefresh {
-//                    observer.onNext(())
-//                }
+                base.hs.onRefresh {
+                    observer.onNext(())
+                }
             }
             return Disposables.create()
         }.asDriverOnErrorJustComplete()
@@ -27,9 +27,9 @@ extension Reactive where Base : UIScrollView {
     public var onLoadMore : Driver<Void> {
         return Observable<Void>.create {[weak base] (observer) -> Disposable in
             if let base = base {
-//                base.jy.onLoadMore {
-//                    observer.onNext(())
-//                }
+                base.hs.onLoadMore {
+                    observer.onNext(())
+                }
             }
             return Disposables.create()
         }.asDriverOnErrorJustComplete()
@@ -38,16 +38,16 @@ extension Reactive where Base : UIScrollView {
     public var isRefreshing : Binder<Bool> {
         return Binder(self.base) { scrollView, isRefreshing in
             if isRefreshing {
-//                scrollView.jy.startRefresh()
+                scrollView.hs.startRefresh()
             }else {
-//                scrollView.jy.stopRefresh()
+                scrollView.hs.stopRefresh()
             }
         }
     }
     
     public var isNoMoreData : Binder<Bool> {
         return Binder(self.base) { scrollView, isNoMore in
-//            scrollView.jy.stopLoadMore(isNoMore)
+            scrollView.hs.stopLoadMore(isNoMore)
         }
     }
 }
@@ -56,14 +56,13 @@ extension Reactive where Base : UIScrollView {
 extension Reactive where Base : UIImageView {
     public var imageUrl : Binder<(String)> {
         return Binder(self.base) { imageView, urlString in
-//            imageView.setImage(urlString: urlString, placeholder: nil)
             imageView.hs_sdImage(withUrlString: urlString)
         }
     }
     
-//    public var imageUrlAndplaceholder : Binder<(urlString: String, placeholder: String)> {
-//        return Binder(self.base) { imageView, value in
-//            imageView.setImage(urlString: value.urlString, placeholder: value.placeholder)
-//        }
-//    }
+    public var imageUrlAndplaceholder : Binder<(urlString: String, placeholder: UIImage)> {
+        return Binder(self.base) { imageView, value in
+            imageView.hs_sdImage(withUrlString: value.urlString, placeholderImage: value.placeholder)
+        }
+    }
 }

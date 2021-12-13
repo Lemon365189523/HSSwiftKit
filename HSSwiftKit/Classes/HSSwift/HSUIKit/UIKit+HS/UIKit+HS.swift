@@ -6,5 +6,8 @@
 //
 
 import Foundation
+// 那些对象需要命名空间
+extension UIView: HSNameSpace{}
+
 
 

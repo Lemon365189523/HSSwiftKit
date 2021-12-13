@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		317BCD162766EDF500301A00 /* HSRefreshType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BCD152766EDF500301A00 /* HSRefreshType.swift */; };
 		31B53265275B62AC00416D9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B53264275B62AC00416D9E /* AppDelegate.swift */; };
 		31B53267275B62AC00416D9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B53266275B62AC00416D9E /* SceneDelegate.swift */; };
 		31B53269275B62AC00416D9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B53268275B62AC00416D9E /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		2AB075699C914E16DA646B0E /* Pods-HSSwiftKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSSwiftKit.release.xcconfig"; path = "Target Support Files/Pods-HSSwiftKit/Pods-HSSwiftKit.release.xcconfig"; sourceTree = "<group>"; };
+		317BCD152766EDF500301A00 /* HSRefreshType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSRefreshType.swift; sourceTree = "<group>"; };
 		31B53261275B62AC00416D9E /* HSSwiftKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSSwiftKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B53264275B62AC00416D9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31B53266275B62AC00416D9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 			children = (
 				31E7C6ED276606B0002EC67A /* HSHUDType.swift */,
 				31E7C6FB27663A47002EC67A /* HSEmptyViewType.swift */,
+				317BCD152766EDF500301A00 /* HSRefreshType.swift */,
 			);
 			path = HSUIKitType;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				31B53265275B62AC00416D9E /* AppDelegate.swift in Sources */,
 				31E7C6F8276615E7002EC67A /* UIKit+HS.swift in Sources */,
 				31E7C6FC27663A47002EC67A /* HSEmptyViewType.swift in Sources */,
+				317BCD162766EDF500301A00 /* HSRefreshType.swift in Sources */,
 				31B53267275B62AC00416D9E /* SceneDelegate.swift in Sources */,
 				31B53293275B754100416D9E /* HS.swift in Sources */,
 				31B5328E275B748700416D9E /* Configs.swift in Sources */,

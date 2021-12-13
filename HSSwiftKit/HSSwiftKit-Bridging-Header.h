@@ -4,3 +4,4 @@
 
 #import "HSNetwork-umbrella.h"
 #import "HSCategorys-umbrella.h"
+#import "HSUIComponents-umbrella.h"
