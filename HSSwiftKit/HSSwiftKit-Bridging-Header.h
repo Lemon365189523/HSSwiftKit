@@ -7,3 +7,5 @@
 #import "HSUIComponents-umbrella.h"
 #import "HSBaseRequest-umbrella.h"
 #import "HSKit-umbrella.h"
+#import "HSMediator-umbrella.h"
+#import "HSTools-umbrella.h"

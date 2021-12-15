@@ -27,6 +27,7 @@
 		31B532AE275B7DFC00416D9E /* DefaultValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B532AD275B7DFC00416D9E /* DefaultValue.swift */; };
 		31B532B2275B96A500416D9E /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B532B1275B96A500416D9E /* UserDefaultWrapper.swift */; };
 		31B532B5275B984900416D9E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B532B4275B984900416D9E /* Network.swift */; };
+		31BF6C66276A327D00963B32 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BF6C65276A327D00963B32 /* Delegate.swift */; };
 		31E7C5D9276603BB002EC67A /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7C5D8276603BB002EC67A /* ViewModelType.swift */; };
 		31E7C6EE276606B0002EC67A /* HSHUDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7C6ED276606B0002EC67A /* HSHUDType.swift */; };
 		31E7C6F427661560002EC67A /* UI+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E7C6F327661560002EC67A /* UI+Rx.swift */; };
@@ -59,6 +60,7 @@
 		31B532AD275B7DFC00416D9E /* DefaultValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValue.swift; sourceTree = "<group>"; };
 		31B532B1275B96A500416D9E /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		31B532B4275B984900416D9E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		31BF6C65276A327D00963B32 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		31C8F77F275CBE5A00885FF4 /* HSSwiftKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HSSwiftKit-Bridging-Header.h"; sourceTree = "<group>"; };
 		31E7C5D8276603BB002EC67A /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		31E7C6ED276606B0002EC67A /* HSHUDType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSHUDType.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		31B5327E275B647900416D9E /* HSSwift */ = {
 			isa = PBXGroup;
 			children = (
+				31BF6C64276A326600963B32 /* Delegate */,
 				317BCD1A27673EF700301A00 /* DelegateModel */,
 				31E7C5D72766039D002EC67A /* HSProtocol */,
 				31E7C580276601C4002EC67A /* HSUIKit */,
@@ -248,6 +251,14 @@
 				31B532B1275B96A500416D9E /* UserDefaultWrapper.swift */,
 			);
 			path = UserDefaultWrapper;
+			sourceTree = "<group>";
+		};
+		31BF6C64276A326600963B32 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				31BF6C65276A327D00963B32 /* Delegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		31E7C580276601C4002EC67A /* HSUIKit */ = {
@@ -447,6 +458,7 @@
 				317BCD19276721D800301A00 /* Network+Rx.swift in Sources */,
 				31B532A9275B7C8200416D9E /* NSObject+Rx.swift in Sources */,
 				317BCD1E27673F8200301A00 /* UICollectionView+DelegateModel.swift in Sources */,
+				31BF6C66276A327D00963B32 /* Delegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
