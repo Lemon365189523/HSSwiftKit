@@ -114,21 +114,21 @@ PODS:
   - YYKit/no-arc (1.0.9)
 
 DEPENDENCIES:
-  - HSBase (from `../zykeji/HSPrivatePods/HSBase`)
-  - HSBaseRequest (from `../zykeji/HSPrivatePods/HSBaseRequest`)
-  - HSCategorys (from `../zykeji/HSPrivatePods/HSCategorys`)
-  - HSCommon (from `../zykeji/HSPrivatePods/HSCommon`)
-  - HSKit/HSLock (from `../zykeji/HSPrivatePods/HSKit`)
-  - HSKit/HSSimpleDelegateModel (from `../zykeji/HSPrivatePods/HSKit`)
-  - HSMediator (from `../zykeji/HSPrivatePods/HSMediator`)
-  - HSModuleMediator/Login (from `../zykeji/HSPrivatePods/HSModuleMediator`)
-  - HSNetwork (from `../zykeji/HSPrivatePods/HSNetwork`)
-  - HSOpenInstallHandler (from `../zykeji/HSPrivatePods/HSOpenInstallHandler`)
-  - HSTools/VisitorTool (from `../zykeji/HSPrivatePods/HSTools`)
-  - HSUIComponents/HSRefresh (from `../zykeji/HSPrivatePods/HSUIComponents`)
-  - HSUIComponents/MBManager (from `../zykeji/HSPrivatePods/HSUIComponents`)
-  - HSUserInfo (from `../zykeji/HSPrivatePods/HSUserInfo`)
-  - HSVendors (from `../zykeji/HSPrivatePods/HSVendors`)
+  - HSBase (from `../ZhiYing/HSPrivatePods/HSBase`)
+  - HSBaseRequest (from `../ZhiYing/HSPrivatePods/HSBaseRequest`)
+  - HSCategorys (from `../ZhiYing/HSPrivatePods/HSCategorys`)
+  - HSCommon (from `../ZhiYing/HSPrivatePods/HSCommon`)
+  - HSKit/HSLock (from `../ZhiYing/HSPrivatePods/HSKit`)
+  - HSKit/HSSimpleDelegateModel (from `../ZhiYing/HSPrivatePods/HSKit`)
+  - HSMediator (from `../ZhiYing/HSPrivatePods/HSMediator`)
+  - HSModuleMediator/Login (from `../ZhiYing/HSPrivatePods/HSModuleMediator`)
+  - HSNetwork (from `../ZhiYing/HSPrivatePods/HSNetwork`)
+  - HSOpenInstallHandler (from `../ZhiYing/HSPrivatePods/HSOpenInstallHandler`)
+  - HSTools/VisitorTool (from `../ZhiYing/HSPrivatePods/HSTools`)
+  - HSUIComponents/HSRefresh (from `../ZhiYing/HSPrivatePods/HSUIComponents`)
+  - HSUIComponents/MBManager (from `../ZhiYing/HSPrivatePods/HSUIComponents`)
+  - HSUserInfo (from `../ZhiYing/HSPrivatePods/HSUserInfo`)
+  - HSVendors (from `../ZhiYing/HSPrivatePods/HSVendors`)
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -156,31 +156,31 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   HSBase:
-    :path: "../zykeji/HSPrivatePods/HSBase"
+    :path: "../ZhiYing/HSPrivatePods/HSBase"
   HSBaseRequest:
-    :path: "../zykeji/HSPrivatePods/HSBaseRequest"
+    :path: "../ZhiYing/HSPrivatePods/HSBaseRequest"
   HSCategorys:
-    :path: "../zykeji/HSPrivatePods/HSCategorys"
+    :path: "../ZhiYing/HSPrivatePods/HSCategorys"
   HSCommon:
-    :path: "../zykeji/HSPrivatePods/HSCommon"
+    :path: "../ZhiYing/HSPrivatePods/HSCommon"
   HSKit:
-    :path: "../zykeji/HSPrivatePods/HSKit"
+    :path: "../ZhiYing/HSPrivatePods/HSKit"
   HSMediator:
-    :path: "../zykeji/HSPrivatePods/HSMediator"
+    :path: "../ZhiYing/HSPrivatePods/HSMediator"
   HSModuleMediator:
-    :path: "../zykeji/HSPrivatePods/HSModuleMediator"
+    :path: "../ZhiYing/HSPrivatePods/HSModuleMediator"
   HSNetwork:
-    :path: "../zykeji/HSPrivatePods/HSNetwork"
+    :path: "../ZhiYing/HSPrivatePods/HSNetwork"
   HSOpenInstallHandler:
-    :path: "../zykeji/HSPrivatePods/HSOpenInstallHandler"
+    :path: "../ZhiYing/HSPrivatePods/HSOpenInstallHandler"
   HSTools:
-    :path: "../zykeji/HSPrivatePods/HSTools"
+    :path: "../ZhiYing/HSPrivatePods/HSTools"
   HSUIComponents:
-    :path: "../zykeji/HSPrivatePods/HSUIComponents"
+    :path: "../ZhiYing/HSPrivatePods/HSUIComponents"
   HSUserInfo:
-    :path: "../zykeji/HSPrivatePods/HSUserInfo"
+    :path: "../ZhiYing/HSPrivatePods/HSUserInfo"
   HSVendors:
-    :path: "../zykeji/HSPrivatePods/HSVendors"
+    :path: "../ZhiYing/HSPrivatePods/HSVendors"
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
@@ -195,7 +195,7 @@ SPEC CHECKSUMS:
   HSNetwork: 4b47dc681348825869ad18fb656f4617b702cb2a
   HSOpenInstallHandler: 242662f9e78853d222cee8fc652fd385f8fd03b6
   HSTools: 3874bf21e818a91d35c6ce971b0f9c0c19eea33e
-  HSUIComponents: 1ab605a14e0de5ecd2add03d1fa0d87e0a7526de
+  HSUIComponents: fba17748f5b97a6dc3b86c31e8ecc17cf4a208a5
   HSUserInfo: 604dd62f9d591b03102306c2ec4be961c287170b
   HSVendors: 18818fc13885ee2a98bd4402e863e061ae3f413e
   libOpenInstallSDK: b7b2e92256d845d6e74a76c144c4d65ddf57c06d
@@ -215,6 +215,6 @@ SPEC CHECKSUMS:
   TABAnimated: 8d077a20de46de0c7744c665cd56aae28c49d397
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 41f5c77a8ee8afee60f96a0cc1b63aba841a4bf7
+PODFILE CHECKSUM: a3e879e996b86c615426e4c6221c8e67128f5335
 
 COCOAPODS: 1.11.2

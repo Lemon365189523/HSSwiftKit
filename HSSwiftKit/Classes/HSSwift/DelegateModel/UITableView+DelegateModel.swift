@@ -23,7 +23,8 @@ extension HS where Base: UITableView {
             if let model = objc_getAssociatedObject(base, &AssociatedKeys.delegateModel) as? HSSimpleTableDelegateModel {
                 return model
             }else {
-                let model = HSSimpleTableDelegateModel.init(dataArr: base.hs.dataArray, tableView: base, useAutomaticDimension: true) { ip, cellModel in
+                let model = HSSimpleTableDelegateModel.init(dataArr: base.hs.dataArray, tableView: base, useAutomaticDimension: true) {[weak base] ip, cellModel in
+                    guard let base = base else {return}
                     if base.hs.modelSeleced != nil {
                         base.hs.modelSeleced!(ip, cellModel)
                     }
