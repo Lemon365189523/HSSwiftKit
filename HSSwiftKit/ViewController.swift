@@ -87,7 +87,7 @@ class TestViewModel: NSObject, ViewModelType, ListDataType {
         input.onRefresh.asObservable().flatMap { _ in
             HSNetManager.rx.request(TestApi.categorys, modelType: [CategoryItem].self)
                 .catch({ error in
-                    return Observable.empty()
+                    return Observable.just(nil)
                 })
         }.subscribe(onNext: {[weak self] datas in
             isRefreshing.onNext(false)

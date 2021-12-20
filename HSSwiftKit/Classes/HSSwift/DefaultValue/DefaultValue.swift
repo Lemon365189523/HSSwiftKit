@@ -78,9 +78,9 @@ extension Default {
 }
 
 /// 使用方式
-struct Model {
-    @Default.False var falseValue: Bool
-    @Default.True var trueValue: Bool
-    @Default.TenInt var tenValue: Int
-    @Default<Int> var intValue: Int
-}
+//struct Model {
+//    @Default.False var falseValue: Bool
+//    @Default.True var trueValue: Bool
+//    @Default.TenInt var tenValue: Int
+//    @Default<Int> var intValue: Int
+//}
