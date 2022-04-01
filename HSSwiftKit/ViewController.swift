@@ -48,6 +48,7 @@ class ViewController: UIViewController {
             self.collectionView.hs.reloadData(list)
         }).disposed(by: rx.disposeBag)
         
+        
     }
     
     

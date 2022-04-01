@@ -54,7 +54,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = "Classes", "HSSwiftKit/Classes/**/*.swift"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -89,12 +89,27 @@ Pod::Spec.new do |spec|
 
 
   spec.requires_arc = true
+  spec.static_framework = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
   spec.dependency "HSNetwork"
-  spec.dependency "HSKit/HSLock"
+  spec.dependency "HSKit"
   spec.dependency "HSCommon"
+  spec.dependency "HSBase"
+  spec.dependency "HSVendors"
+  spec.dependency "HSCategorys"
+  spec.dependency "HSUserInfo"
+  spec.dependency "HSTools/VisitorTool"
+  spec.dependency "HSModuleMediator/Login"
+  spec.dependency "HSMediator"
+  spec.dependency "HSUIComponents/MBManager"
+  spec.dependency "HSBaseRequest"
+  spec.dependency "HSOpenInstallHandler"
+  
+  spec.dependency "RxSwift"
+  spec.dependency "RxCocoa"
+  spec.dependency "SnapKit"
   
 end

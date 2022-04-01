@@ -8,6 +8,7 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import HSNetwork
 
 extension Reactive where Base: HSNetManager {
     

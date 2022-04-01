@@ -8,6 +8,7 @@
 import Foundation
 import ObjectiveC
 import HSBase
+import HSKit
 
 // 嵌套结构体
 private struct AssociatedKeys {

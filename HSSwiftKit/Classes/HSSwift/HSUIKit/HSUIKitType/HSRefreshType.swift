@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import HSUIComponents
 
 public enum HSRefreshType {
     case white
