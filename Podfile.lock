@@ -14,9 +14,9 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - CocoaLumberjack (3.7.2):
-    - CocoaLumberjack/Core (= 3.7.2)
-  - CocoaLumberjack/Core (3.7.2)
+  - CocoaLumberjack (3.7.4):
+    - CocoaLumberjack/Core (= 3.7.4)
+  - CocoaLumberjack/Core (3.7.4)
   - HSBase (0.0.1):
     - HSCategorys
     - HSCommon
@@ -93,19 +93,19 @@ PODS:
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJExtension (3.3.0)
-  - MJRefresh (3.7.2)
+  - MJRefresh (3.7.5)
   - ReactiveObjC (3.1.1)
-  - RxCocoa (6.2.0):
-    - RxRelay (= 6.2.0)
-    - RxSwift (= 6.2.0)
-  - RxRelay (6.2.0):
-    - RxSwift (= 6.2.0)
-  - RxSwift (6.2.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
   - SAMKeychain (1.5.3)
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
-  - SnapKit (5.0.1)
+  - SnapKit (5.6.0)
   - SVGKit (3.0.0):
     - CocoaLumberjack (~> 3.0)
   - TABAnimated (2.5.9)
@@ -184,18 +184,18 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  CocoaLumberjack: b7e05132ff94f6ae4dfa9d5bce9141893a21d9da
-  HSBase: f179804baa03ee82050b2963391f1da037544f7f
+  CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
+  HSBase: a7addb275b218f35940ee357ebf707a986a992d0
   HSBaseRequest: da1bf799ca1509a160675c75b2ebddbf26425d9d
   HSCategorys: d976c6d4e06aabeb5724fa5b385b10597454a1e0
   HSCommon: df3c7052fea2b877d483431882aed8e43a7694c7
   HSKit: ce685ff3964ac4c3c43d0e36e6c427986f74529f
   HSMediator: 6e4c93aeb622a18bc806f3ea5614aa86155b9b09
-  HSModuleMediator: d57e63d407e082322a50fa17aa8dda8c9450c6e0
+  HSModuleMediator: 2a57b7a296a8c874247ca56198e5e9121d824b6a
   HSNetwork: 4b47dc681348825869ad18fb656f4617b702cb2a
   HSOpenInstallHandler: 242662f9e78853d222cee8fc652fd385f8fd03b6
   HSTools: 3874bf21e818a91d35c6ce971b0f9c0c19eea33e
-  HSUIComponents: fba17748f5b97a6dc3b86c31e8ecc17cf4a208a5
+  HSUIComponents: c6b3eac0348c3f0b7b2c67b0969293fa6d84197d
   HSUserInfo: 604dd62f9d591b03102306c2ec4be961c287170b
   HSVendors: 18818fc13885ee2a98bd4402e863e061ae3f413e
   libOpenInstallSDK: b7b2e92256d845d6e74a76c144c4d65ddf57c06d
@@ -203,18 +203,18 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJExtension: 01704cca2b60a214c10761b6491eab74069d68a9
-  MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
-  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
-  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
   TABAnimated: 8d077a20de46de0c7744c665cd56aae28c49d397
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: a3e879e996b86c615426e4c6221c8e67128f5335
+PODFILE CHECKSUM: 5ebc3f227a5e5aaae4502fbe433d9655c71d09d2
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             self.collectionView.hs.reloadData(list)
         }).disposed(by: rx.disposeBag)
         
-        
+        output.hud.drive(view.rx.hud).disposed(by: rx.disposeBag)
     }
     
     
@@ -77,6 +77,8 @@ class TestViewModel: NSObject, ViewModelType, ListDataType {
         
         var isNotMoreData: Driver<Bool>
         
+        var hud: Driver<HSHUDType>
+        
         var list: Driver<[HSTableAndCollectCommonGroupModel]>
     }
     
@@ -85,10 +87,16 @@ class TestViewModel: NSObject, ViewModelType, ListDataType {
         
         let isNotMoreData: PublishSubject<Bool> = PublishSubject<Bool>()
         
+        let hud: PublishSubject<HSHUDType> = PublishSubject<HSHUDType>()
+        
         input.onRefresh.asObservable().flatMap { _ in
             HSNetManager.rx.request(TestApi.categorys, modelType: [CategoryItem].self)
                 .catch({ error in
-                    return Observable.just(nil)
+                    // 显示异常
+                    print(error)
+                    hud.onNext(HSHUDType.fail(message: error.localizedDescription))
+                    isRefreshing.onNext(false)
+                    return Observable.empty()
                 })
         }.subscribe(onNext: {[weak self] datas in
             isRefreshing.onNext(false)
@@ -101,13 +109,11 @@ class TestViewModel: NSObject, ViewModelType, ListDataType {
                 return cellModel
             }))
             self.list.accept([grouModel])
-        }, onError: {error in
-            print(error)
-            isRefreshing.onNext(false)
         }).disposed(by: self.rx.disposeBag)
         
         return Output(isRefreshing: isRefreshing.asDriverOnErrorJustComplete(),
                       isNotMoreData: isNotMoreData.asDriverOnErrorJustComplete(),
+                      hud: hud.asDriverOnErrorJustComplete(),
                       list: list.asDriver())
     }
     

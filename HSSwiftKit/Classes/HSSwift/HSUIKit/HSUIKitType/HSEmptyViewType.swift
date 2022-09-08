@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import HSCategorys
+//import HSCategorys
 
 public enum HSEmptyViewType {
     case networkError
