@@ -87,6 +87,7 @@ PODS:
     - MBProgressHUD
   - HSUserInfo (0.0.1):
     - MJExtension (~> 3.3.0)
+    - SAMKeychain (~> 1.5.3)
   - HSVendors (0.0.1)
   - libOpenInstallSDK (2.5.4.1)
   - lottie-ios (2.5.3)
@@ -196,7 +197,7 @@ SPEC CHECKSUMS:
   HSOpenInstallHandler: 242662f9e78853d222cee8fc652fd385f8fd03b6
   HSTools: 3874bf21e818a91d35c6ce971b0f9c0c19eea33e
   HSUIComponents: c6b3eac0348c3f0b7b2c67b0969293fa6d84197d
-  HSUserInfo: 604dd62f9d591b03102306c2ec4be961c287170b
+  HSUserInfo: 4314389aaf1b6a01feb89b4b53a8a2ac74813830
   HSVendors: 18818fc13885ee2a98bd4402e863e061ae3f413e
   libOpenInstallSDK: b7b2e92256d845d6e74a76c144c4d65ddf57c06d
   lottie-ios: a50d5c0160425cd4b01b852bb9578963e6d92d31
@@ -215,6 +216,6 @@ SPEC CHECKSUMS:
   TABAnimated: 8d077a20de46de0c7744c665cd56aae28c49d397
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 5ebc3f227a5e5aaae4502fbe433d9655c71d09d2
+PODFILE CHECKSUM: b064f045eea92a59ca7a533f81000e6c249b809c
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

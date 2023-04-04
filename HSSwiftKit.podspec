@@ -87,7 +87,7 @@ Pod::Spec.new do |spec|
   # spec.libraries = "iconv", "xml2"
 
 
-
+  spec.swift_version = '5.1'
   spec.requires_arc = true
   spec.static_framework = true
 

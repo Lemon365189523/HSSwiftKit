@@ -27,12 +27,14 @@ target 'HSSwiftKit' do
   pod "HSOpenInstallHandler", path: '../ZhiYing/HSPrivatePods/HSOpenInstallHandler'#, :modular_headers => true
   pod "HSKit/HSSimpleDelegateModel", path: '../ZhiYing/HSPrivatePods/HSKit'#, :modular_headers => true
   
-#  post_install do |installer|
-#    installer.pods_project.targets.each do |target|
-#      target.build_configurations.each do |config|
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
 #        target.build_settings(config.name)['CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES'] = 'YES'
-#      end
-#    end
-#  end
+    #设置测试环境
+      config.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] ||= ['$(inherited)','HSOnline=0', 'HSUAT=0','HSTEST=1','PERMISSION_CAMERA=1','PERMISSION_MICROPHONE=1','PERMISSION_PHOTOS=1','PERMISSION_LOCATION=1',]
+      end
+    end
+  end
 end
 

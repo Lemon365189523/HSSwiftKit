@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3175ECF5295D7A2700D90419 /* Mediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3175ECF4295D7A2700D90419 /* Mediator.swift */; };
 		317BCD162766EDF500301A00 /* HSRefreshType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BCD152766EDF500301A00 /* HSRefreshType.swift */; };
 		317BCD19276721D800301A00 /* Network+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BCD18276721D800301A00 /* Network+Rx.swift */; };
 		317BCD1C27673F7200301A00 /* UITableView+DelegateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317BCD1B27673F7200301A00 /* UITableView+DelegateModel.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		2AB075699C914E16DA646B0E /* Pods-HSSwiftKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HSSwiftKit.release.xcconfig"; path = "Target Support Files/Pods-HSSwiftKit/Pods-HSSwiftKit.release.xcconfig"; sourceTree = "<group>"; };
+		3175ECF4295D7A2700D90419 /* Mediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mediator.swift; sourceTree = "<group>"; };
 		317BCD152766EDF500301A00 /* HSRefreshType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSRefreshType.swift; sourceTree = "<group>"; };
 		317BCD18276721D800301A00 /* Network+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Network+Rx.swift"; sourceTree = "<group>"; };
 		317BCD1B27673F7200301A00 /* UITableView+DelegateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DelegateModel.swift"; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3175ECF3295D74EA00D90419 /* Mediator */ = {
+			isa = PBXGroup;
+			children = (
+				3175ECF4295D7A2700D90419 /* Mediator.swift */,
+			);
+			path = Mediator;
+			sourceTree = "<group>";
+		};
 		317BCD17276721BC00301A00 /* Network+Rx */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +161,7 @@
 		31B5327E275B647900416D9E /* HSSwift */ = {
 			isa = PBXGroup;
 			children = (
+				3175ECF3295D74EA00D90419 /* Mediator */,
 				31BF6C64276A326600963B32 /* Delegate */,
 				317BCD1A27673EF700301A00 /* DelegateModel */,
 				31E7C5D72766039D002EC67A /* HSProtocol */,
@@ -446,6 +457,7 @@
 				31B532B2275B96A500416D9E /* UserDefaultWrapper.swift in Sources */,
 				31E7C6EE276606B0002EC67A /* HSHUDType.swift in Sources */,
 				31B53289275B743100416D9E /* Observable+Operators.swift in Sources */,
+				3175ECF5295D7A2700D90419 /* Mediator.swift in Sources */,
 				31829C3C277034800078CFEE /* HSActivityIndicator.swift in Sources */,
 				31B5328B275B743100416D9E /* ErrorTracker.swift in Sources */,
 				31B5328A275B743100416D9E /* ActivityIndicator.swift in Sources */,

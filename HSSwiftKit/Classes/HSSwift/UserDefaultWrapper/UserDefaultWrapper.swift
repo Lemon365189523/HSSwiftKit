@@ -32,4 +32,12 @@ struct UserDefaultWrapper<T> {
     }
 }
 
+/**
+// 使用方式
+struct Model {
+    @UserDefaultWrapper("model_name", defaultValue: "name")
+    var name: String?
+}
+*/
+
 
