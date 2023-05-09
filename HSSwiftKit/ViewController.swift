@@ -43,6 +43,8 @@ class ViewController: UIViewController {
         
         output.isRefreshing.drive(collectionView.rx.isRefreshing).disposed(by: rx.disposeBag)
         
+        output.isNotMoreData.drive(collectionView.rx.isNoMoreData).disposed(by: rx.disposeBag)
+        
         output.list.drive(onNext: {[weak self] list in
             guard let self = self else { return }
             self.collectionView.hs.reloadData(list)
@@ -63,7 +65,6 @@ class TestViewModel: NSObject, ViewModelType, ListDataType {
     var pageSize: Int = 10
     
     var pageIndex: Int = 1
-    
     
     struct Input: RefreshActionType {
         var onRefresh: Driver<Void>
@@ -109,6 +110,27 @@ class TestViewModel: NSObject, ViewModelType, ListDataType {
                 return cellModel
             }))
             self.list.accept([grouModel])
+        }).disposed(by: self.rx.disposeBag)
+        
+        input.onLoadMore.asObservable().flatMap { _ in
+            HSNetManager.rx.request(TestApi.categorys, modelType: [CategoryItem].self)
+                .catch({ error in
+                    // 显示异常
+                    print(error)
+                    hud.onNext(HSHUDType.fail(message: error.localizedDescription))
+                    isRefreshing.onNext(false)
+                    return Observable.empty()
+                })
+        }.subscribe(onNext: {[weak self] datas in
+            isRefreshing.onNext(false)
+            guard let self = self, let itemList = datas else { return }
+            let grouModel = HSTableAndCollectCommonGroupModel()
+            grouModel.itemsArray.addObjects(from: itemList.map({ item in
+                let cellModel = CategoryCellModel()
+                
+                return cellModel
+            }))
+            self.list.accept(self.list.value + [grouModel])
         }).disposed(by: self.rx.disposeBag)
         
         return Output(isRefreshing: isRefreshing.asDriverOnErrorJustComplete(),

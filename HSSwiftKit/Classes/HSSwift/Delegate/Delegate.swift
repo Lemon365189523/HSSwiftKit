@@ -55,8 +55,11 @@ extension Delegate where Output: OptionalProtocol {
         }
     }
 }
-/** 使用例子
- let onReturnOptional = Delegate<Int, Int?>()
- let value = onReturnOptional.call(1)
- */
 
+// 使用例子
+//let onReturnOptional = Delegate<Int, Void>()
+//let value = onReturnOptional.call(1)
+//
+//onReturnOptional.delegate(on: self) { weakSelf, value in
+//
+//}
